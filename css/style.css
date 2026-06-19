@@ -1,3 +1,15 @@
+:root {
+  --primary: #3b1f0a;
+  --accent: #f5c878;
+  --soft: #fdf6ee;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG");
+  background-size: cover;
+  background-position: center;
+}
 * {
   box-sizing: border-box;
   margin: 0;
