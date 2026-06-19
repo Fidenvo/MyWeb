@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8fafc;
+  background-color: #fdf6ee;
   color: #1f2937;
 }
 
@@ -23,6 +23,7 @@ body {
 .brand {
   font-size: 20px;
   font-weight: bold;
+  color: #fff;
 }
 
 .main-nav {
@@ -36,49 +37,74 @@ body {
   font-size: 14px;
 }
 
-/* Hero */
+.main-nav a:hover {
+  color: #f5c878;
+}
+
+/* Hero - có ảnh nền */
 .hero {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
   text-align: center;
-  padding: 48px 32px;
-  background: #fdf6ee;
+  padding: 80px 32px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero * {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
   font-size: 13px;
-  color: #888;
-  margin-bottom: 8px;
+  color: #f5c878;
+  margin-bottom: 10px;
+  letter-spacing: 0.06em;
 }
 
 #main-title {
-  font-size: 28px;
-  color: #3b1f0a;
-  margin-bottom: 12px;
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 14px;
 }
 
 .intro {
   font-size: 15px;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.hero img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  color: #e5e7eb;
+  margin-bottom: 24px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .primary-button {
   display: inline-block;
   padding: 10px 24px;
-  background: #3b1f0a;
-  color: #fff;
+  background: #f5c878;
+  color: #3b1f0a;
   text-decoration: none;
   border-radius: 6px;
   font-size: 14px;
+  font-weight: bold;
 }
 
-/* Sections */
-section {
+.primary-button:hover {
+  background: #f0b04a;
+}
+
+/* Section chung */
+.section {
   padding: 40px 32px;
   max-width: 900px;
   margin: 0 auto;
@@ -87,7 +113,7 @@ section {
 section h2 {
   font-size: 20px;
   color: #3b1f0a;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 section p {
@@ -97,26 +123,94 @@ section p {
   margin-bottom: 12px;
 }
 
-section img {
-  max-width: 100%;
+/* About */
+.about-section {
+  background: #fff;
   border-radius: 8px;
-  margin-top: 12px;
+  border: 1px solid #ddd;
+  margin: 32px auto;
+  padding: 32px;
+}
+
+/* Topic list */
+.topic-list {
+  padding-left: 20px;
+}
+
+.topic-list li {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.topic-list img {
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* Style guide */
+.style-guide {
+  padding: 32px;
+  max-width: 900px;
+  margin: 0 auto 32px;
+}
+
+.swatches {
+  display: flex;
+  gap: 16px;
+}
+
+.swatch {
+  flex: 1;
+  padding: 24px 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.swatch-primary {
+  background: #3b1f0a;
+  color: #fff;
+}
+
+.swatch-accent {
+  background: #f5c878;
+  color: #3b1f0a;
+}
+
+.swatch-soft {
+  background: #fdf6ee;
+  color: #3b1f0a;
+  border: 1px solid #ddd;
 }
 
 /* Gallery */
 #gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  padding: 32px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 #gallery h2 {
-  width: 100%;
+  font-size: 20px;
+  color: #3b1f0a;
+  margin-bottom: 16px;
 }
 
 #gallery img {
-  width: 260px;
   border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 4px;
+}
+
+/* Contact */
+#contact {
+  padding: 32px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Footer */
