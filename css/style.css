@@ -4,6 +4,23 @@
   --soft: #fdf6ee;
 }
 
+.lead {
+  font-size: 18px;
+  color: #3b1f0a;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+blockquote {
+  border-left: 4px solid #f5c878;
+  padding: 12px 20px;
+  margin: 16px 0;
+  font-style: italic;
+  color: #555;
+  background: #fff8ee;
+  border-radius: 0 6px 6px 0;
+}
+
 .hero {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url("https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG");
