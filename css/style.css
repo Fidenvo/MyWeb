@@ -251,3 +251,61 @@ footer {
   color: #888;
   background: #fdf6ee;
 }
+/* Card */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Topic list item dạng card */
+.topic-list li {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/* Section about dạng card */
+#about {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 32px;
+  margin: 32px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Section story dạng card */
+#story {
+  background: #fff8ee;
+  border: 1px solid #f5c878;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 24px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(245, 200, 120, 0.2);
+  box-sizing: border-box;
+}
+
+/* Section contact dạng card */
+#contact {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 24px auto 40px;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
