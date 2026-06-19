@@ -343,3 +343,41 @@ figcaption {
   margin-top: 6px;
   font-style: italic;
 }
+.content-layout {
+  display: flex;
+  gap: 24px;
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 32px;
+}
+
+.main-content {
+  flex: 2;
+}
+
+.side-panel {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  align-self: flex-start;
+}
+
+.side-panel h3 {
+  font-size: 15px;
+  color: #3b1f0a;
+  margin-bottom: 12px;
+}
+
+.side-panel ul {
+  padding-left: 18px;
+}
+
+.side-panel ul li {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
