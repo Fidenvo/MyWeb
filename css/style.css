@@ -4,29 +4,6 @@
   --soft: #fdf6ee;
 }
 
-.lead {
-  font-size: 18px;
-  color: #3b1f0a;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-
-blockquote {
-  border-left: 4px solid #f5c878;
-  padding: 12px 20px;
-  margin: 16px 0;
-  font-style: italic;
-  color: #555;
-  background: #fff8ee;
-  border-radius: 0 6px 6px 0;
-}
-
-.hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url("https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG");
-  background-size: cover;
-  background-position: center;
-}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,6 +14,24 @@ body {
   font-family: Arial, sans-serif;
   background-color: #fdf6ee;
   color: #1f2937;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 16px 0;
+}
+
+figcaption {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+  margin-top: 6px;
+  font-style: italic;
 }
 
 /* Header */
@@ -70,9 +65,10 @@ body {
   color: #f5c878;
 }
 
-/* Hero - có ảnh nền */
+/* Hero */
 .hero {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG");
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -152,24 +148,40 @@ section p {
   margin-bottom: 12px;
 }
 
-/* About */
-.about-section {
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  margin: 32px auto;
-  padding: 32px;
+/* Lead và blockquote */
+.lead {
+  font-size: 18px;
+  color: #3b1f0a;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+blockquote {
+  border-left: 4px solid #f5c878;
+  padding: 12px 20px;
+  margin: 16px 0;
+  font-style: italic;
+  color: #555;
+  background: #fff8ee;
+  border-radius: 0 6px 6px 0;
 }
 
 /* Topic list */
 .topic-list {
-  padding-left: 20px;
+  padding-left: 0;
 }
 
 .topic-list li {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  list-style: none;
   font-size: 14px;
   color: #555;
-  margin-bottom: 16px;
   line-height: 1.6;
 }
 
@@ -179,78 +191,6 @@ section p {
   border: 1px solid #ddd;
 }
 
-/* Style guide */
-.style-guide {
-  padding: 32px;
-  max-width: 900px;
-  margin: 0 auto 32px;
-}
-
-.swatches {
-  display: flex;
-  gap: 16px;
-}
-
-.swatch {
-  flex: 1;
-  padding: 24px 16px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.swatch-primary {
-  background: #3b1f0a;
-  color: #fff;
-}
-
-.swatch-accent {
-  background: #f5c878;
-  color: #3b1f0a;
-}
-
-.swatch-soft {
-  background: #fdf6ee;
-  color: #3b1f0a;
-  border: 1px solid #ddd;
-}
-
-/* Gallery */
-#gallery {
-  padding: 32px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-#gallery h2 {
-  font-size: 20px;
-  color: #3b1f0a;
-  margin-bottom: 16px;
-}
-
-#gallery img {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  margin: 4px;
-}
-
-/* Contact */
-#contact {
-  padding: 32px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 16px;
-  border-top: 1px solid #ddd;
-  font-size: 12px;
-  color: #888;
-  background: #fdf6ee;
-}
 /* Card */
 .card {
   background: #fff;
@@ -262,19 +202,7 @@ footer {
   box-sizing: border-box;
 }
 
-/* Topic list item dạng card */
-.topic-list li {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 16px 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  box-sizing: border-box;
-  list-style: none;
-}
-
-/* Section about dạng card */
+/* Section about */
 #about {
   background: #fff;
   border: 1px solid #ddd;
@@ -286,7 +214,7 @@ footer {
   box-sizing: border-box;
 }
 
-/* Section story dạng card */
+/* Section story */
 #story {
   background: #fff8ee;
   border: 1px solid #f5c878;
@@ -298,51 +226,7 @@ footer {
   box-sizing: border-box;
 }
 
-/* Section contact dạng card */
-#contact {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 28px 32px;
-  margin: 24px auto 40px;
-  max-width: 900px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  box-sizing: border-box;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-figure {
-  margin: 16px 0;
-}
-
-figcaption {
-  font-size: 12px;
-  color: #888;
-  text-align: center;
-  margin-top: 6px;
-  font-style: italic;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-figure {
-  margin: 16px 0;
-}
-
-figcaption {
-  font-size: 12px;
-  color: #888;
-  text-align: center;
-  margin-top: 6px;
-  font-style: italic;
-}
+/* Content layout */
 .content-layout {
   display: flex;
   gap: 24px;
@@ -381,6 +265,66 @@ figcaption {
   color: #555;
   margin-bottom: 6px;
 }
+
+/* Features */
+#features {
+  margin: 32px 0;
+}
+
+.card-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.feature-card {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  box-sizing: border-box;
+}
+
+.feature-card h3 {
+  font-size: 15px;
+  color: #3b1f0a;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Style guide */
+.style-guide {
+  padding: 32px;
+  max-width: 900px;
+  margin: 0 auto 32px;
+}
+
+.swatches {
+  display: flex;
+  gap: 16px;
+}
+
+.swatch {
+  flex: 1;
+  padding: 24px 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.swatch-primary { background: #3b1f0a; color: #fff; }
+.swatch-accent  { background: #f5c878; color: #3b1f0a; }
+.swatch-soft    { background: #fdf6ee; color: #3b1f0a; border: 1px solid #ddd; }
+
+/* Portfolio */
 #portfolio {
   margin: 32px 0;
 }
@@ -414,4 +358,107 @@ figcaption {
   color: #3b1f0a;
   font-weight: bold;
   margin: 0;
+}
+
+/* Contact */
+#contact {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 24px auto 40px;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.contact-form label {
+  font-size: 13px;
+  color: #3b1f0a;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.contact-form input[type="submit"] {
+  background: #3b1f0a;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.contact-form input[type="submit"]:hover {
+  background: #f5c878;
+  color: #3b1f0a;
+}
+
+/* Gallery */
+#gallery {
+  padding: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#gallery h2 {
+  font-size: 20px;
+  color: #3b1f0a;
+  margin-bottom: 16px;
+}
+
+#gallery img {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 4px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 16px;
+  border-top: 1px solid #ddd;
+  font-size: 12px;
+  color: #888;
+  background: #fdf6ee;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-layout {
+    flex-direction: column;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-row {
+    flex-direction: column;
+  }
+
+  .swatches {
+    flex-direction: column;
+  }
+
+  .site-header {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
