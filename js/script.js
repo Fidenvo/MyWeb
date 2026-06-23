@@ -103,29 +103,34 @@ if (themeSelect) {
 
 
 // ==========================================
-// BÀI 07: TÌM KIẾM NHANH NỘI DUNG TRÊN WEBSITE
+// BÀI 07: TÌM KIẾM NHANH NỘI DUNG (ĐÃ SỬA LỖI TỰ ẨN ẢNH)
 // ==========================================
 const searchInput = document.getElementById("searchInput");
 const searchItems = document.querySelectorAll(".search-item");
 
 if (searchInput && searchItems.length > 0) {
-  searchInput.addEventListener("input", function () { // Dùng sự kiện 'input' để mượt mà hơn 'keyup'
+  searchInput.addEventListener("input", function () {
     const keyword = searchInput.value.toLowerCase().trim();
 
     searchItems.forEach(function (item) {
+      // Nếu ô tìm kiếm trống, hiển thị lại trạng thái ban đầu của CSS
+      if (keyword === "") {
+        item.style.setProperty('display', '', 'important');
+        return;
+      }
+
       const text = item.textContent.toLowerCase();
       if (text.includes(keyword)) {
-        item.style.display = ""; // Hiển thị lại cấu trúc mặc định ban đầu
+        item.style.setProperty('display', '', 'important');
       } else {
-        item.style.display = "none"; // Ẩn phần tử không khớp từ khóa
+        item.style.setProperty('display', 'none', 'important');
       }
     });
   });
 }
 
-
 // ==========================================
-// BÀI 08: LỌC GALLERY ẢNH THEO NHÓM (DATA-ATTRIBUTE)
+// BÀI 08: LỌC GALLERY ẢNH THEO NHÓM (ĐÃ SỬA LỖI XUNG ĐỘT)
 // ==========================================
 const filterButtons = document.querySelectorAll(".filter-btn");
 const galleryItems = document.querySelectorAll(".gallery-item");
@@ -137,10 +142,13 @@ if (filterButtons.length > 0 && galleryItems.length > 0) {
 
       galleryItems.forEach(function (item) {
         const category = item.dataset.category;
+        
         if (filter === "all" || category === filter) {
-          item.style.display = "";
+          // Hiện lại ảnh theo đúng thiết lập Flex/Grid của CSS gốc
+          item.style.setProperty('display', '', 'important');
         } else {
-          item.style.display = "none";
+          // Chỉ ẩn những ảnh không thuộc nhóm được chọn
+          item.style.setProperty('display', 'none', 'important');
         }
       });
     });
