@@ -433,3 +433,7 @@ footer {
   .portfolio-grid { grid-template-columns: 1fr; }
   #main-title { font-size: 24px; }
 }
+/*===== (responsive) Đoạn mã CSS trên được gọi là Media Queries (Truy vấn phương tiện). Nó được
+ dùng để làm Responsive Web Design — tức là tự động thay đổi giao diện trang web sao
+  cho đẹp mắt và vừa vặn khi xem trên các thiết bị có màn hình nhỏ như máy tính bảng
+   (tablet) và điện thoại di động (smartphone). ===== */
