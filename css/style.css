@@ -433,7 +433,92 @@ footer {
   .portfolio-grid { grid-template-columns: 1fr; }
   #main-title { font-size: 24px; }
 }
-/*===== (responsive) Đoạn mã CSS trên được gọi là Media Queries (Truy vấn phương tiện). Nó được
+
+/* (media) Đoạn mã CSS trên được gọi là Media Queries (Truy vấn phương tiện). Nó được
  dùng để làm Responsive Web Design — tức là tự động thay đổi giao diện trang web sao
   cho đẹp mắt và vừa vặn khi xem trên các thiết bị có màn hình nhỏ như máy tính bảng
    (tablet) và điện thoại di động (smartphone). ===== */
+
+   /* --- Bài 04: Class dùng để ẩn nội dung khi bấm nút --- */
+.hidden {
+  display: none !important;
+}
+
+/* --- Bài 05: Cấu hình Menu đóng/mở tương tác trên thiết bị di động --- */
+.menu-toggle {
+  display: none; /* Mặc định ẩn nút bấm này trên máy tính màn hình lớn */
+}
+
+@media (max-width: 768px) {
+  /* Hiện nút "☰ Menu" khi xem trên điện thoại/máy tính bảng */
+  .menu-toggle {
+    display: block !important;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Ẩn các đường link menu đi, khi nào bấm nút mới hiện */
+  .main-nav {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: #3b1f0a;
+    padding: 16px;
+    gap: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  /* Class này sẽ được JS tự động thêm vào thẻ .main-nav để hiện menu ra */
+  .main-nav.active {
+    display: flex; 
+  }
+}
+
+/* --- Bài 06: Giao diện Nền tối (Dark Mode) --- */
+body.dark-mode {
+  background-color: #111827;
+  color: #f8fafc;
+}
+body.dark-mode #features, 
+body.dark-mode #about, 
+body.dark-mode #contact,
+body.dark-mode .portfolio-item {
+  background-color: #1f2937;
+  color: #f8fafc;
+}
+body.dark-mode section h2,
+body.dark-mode .feature-card h3,
+body.dark-mode .topic-text strong,
+body.dark-mode .portfolio-item p,
+body.dark-mode .side-panel h3,
+body.dark-mode .contact-form label {
+  color: #f5c878;
+}
+body.dark-mode .feature-card,
+body.dark-mode .topic-list li,
+body.dark-mode .side-panel {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f8fafc;
+}
+
+/* --- Bài 06: Giao diện Nền sáng tối giản (Light Mode) --- */
+body.light-mode {
+  background-color: #f9fafb;
+  color: #111827;
+}
+body.light-mode #story,
+body.light-mode .feature-card,
+body.light-mode .topic-list li,
+body.light-mode .side-panel {
+  background-color: #f3f4f6;
+  border-color: #e5e7eb;
+}
