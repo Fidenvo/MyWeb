@@ -7,27 +7,48 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+
 <header class="site-header" id="top">
   <div class="brand">MyWeb Cafe</div>
-  <nav class="main-nav">
+  <button id="menuToggle" class="menu-toggle">☰ Menu</button>
+  <nav class="main-nav" id="mainMenu">
     <a href="#hero">Trang chủ</a>
     <a href="#about">Giới thiệu</a>
     <a href="#gallery">Thư viện</a>
     <a href="#contact">Liên hệ</a>
   </nav>
 </header>
-  
+
 <main>
+
   <section class="hero" id="hero">
     <p class="eyebrow">Website cá nhân theo chủ đề Cafe</p>
-    <h1 id="main-title">Hành trình xây dựng MyWeb Cafe</h1>
-    <p class="intro">Khám phá thế giới cà phê qua từng tách.</p>
+    <h1 id="mainTitle">Hành trình xây dựng MyWeb Cafe</h1>
+    <p class="intro" id="welcomeText">Khám phá thế giới cà phê qua từng tách.</p>
     <figure>
       <img src="img/Cafe café cà phê coffee 2.jpg" alt="Hình ảnh minh họa cà phê Việt Nam" width="800" height="450">
       <figcaption>Hình ảnh minh họa cà phê Việt Nam</figcaption>
     </figure>
-    <a class="primary-button" href="#about">Khám phá chủ đề</a>
+    <div style="margin-top: 15px;">
+      <button id="helloBtn" class="primary-button" style="border:none; cursor:pointer;">Nhấn để xem lời chào</button>
+      <p id="helloResult" style="margin-top: 10px; font-weight: bold; color: #f5c878; min-height: 20px;"></p>
+    </div>
+  </section>
+
+  <section class="interaction-bar" style="background: #fff; border-bottom: 1px solid #e5e7eb;">
+    <div class="section-inner" style="padding: 20px 32px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center;">
+      <div>
+        <label for="themeSelect" style="font-size: 14px; font-weight: bold; color: #3b1f0a; margin-right: 8px;">Chủ đề:</label>
+        <select id="themeSelect" style="padding: 6px 12px; border-radius: 6px; border: 1px solid #ddd;">
+          <option value="">Mặc định (Ấm áp)</option>
+          <option value="dark-mode">Nền tối huyền bí</option>
+          <option value="light-mode">Nền sáng tối giản</option>
+        </select>
+      </div>
+      <div>
+        <input type="text" id="searchInput" placeholder="Tìm tên hạt, thức uống..." style="padding: 6px 12px; border-radius: 6px; border: 1px solid #ddd; width: 250px;">
+      </div>
+    </div>
   </section>
 
   <section id="features">
@@ -57,42 +78,44 @@
     <div class="section-inner">
       <p class="lead">Cà phê không chỉ là thức uống — đó là văn hóa, là cảm xúc, là hành trình.</p>
       <blockquote>"Một tách cà phê tốt là khởi đầu của một ngày tuyệt vời."</blockquote>
+      
+      <button id="toggleAboutBtn" class="primary-button" style="border:none; cursor:pointer; margin-top: 15px; background: #3b1f0a; color: #fff;">Ẩn/Hiện Chi Tiết Phân Loại</button>
     </div>
   </section>
 
   <section id="about">
-    <div class="section-inner">
+    <div class="section-inner" id="aboutContent">
       <h2>1. Phân loại theo giống hạt cà phê</h2>
       <ul class="topic-list">
-        <li>
+        <li class="search-item">
           <img src="img/robusta.jpg" alt="Robusta">
           <div class="topic-text">
             <strong>Robusta</strong>
             <p>Vị đắng đậm, chát nhẹ, caffeine cao.</p>
           </div>
         </li>
-        <li>
+        <li class="search-item">
           <img src="img/Arabica.jpg" alt="Arabica">
           <div class="topic-text">
             <strong>Arabica</strong>
             <p>Vị chua thanh, đắng nhẹ, hương thơm nồng nàn, hậu vị ngọt.</p>
           </div>
         </li>
-        <li>
+        <li class="search-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Single_coffee_bean.jpg/640px-Single_coffee_bean.jpg" alt="Culi">
           <div class="topic-text">
             <strong>Culi</strong>
             <p>Hạt đột biến tròn duy nhất trong quả. Vị đắng gắt, caffeine rất cao.</p>
           </div>
         </li>
-        <li>
+        <li class="search-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Single_coffee_bean.jpg/640px-Single_coffee_bean.jpg" alt="Moka">
           <div class="topic-text">
             <strong>Moka</strong>
             <p>Trồng nhiều ở Đà Lạt. Hương thơm quyến rũ, vị chua thanh.</p>
           </div>
         </li>
-        <li>
+        <li class="search-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Single_coffee_bean.jpg/640px-Single_coffee_bean.jpg" alt="Cherry">
           <div class="topic-text">
             <strong>Cherry</strong>
@@ -103,42 +126,42 @@
 
       <h2>2. Phân loại theo thức uống</h2>
       <ul class="topic-list">
-        <li>
+        <li class="search-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG" alt="Cà phê đen">
           <div class="topic-text">
             <strong>Cà phê đen / Cà phê sữa</strong>
             <p>Pha phin đậm đặc, thêm đá hoặc sữa đặc.</p>
           </div>
         </li>
-        <li>
+        <li class="search-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG" alt="Espresso">
           <div class="topic-text">
             <strong>Espresso</strong>
             <p>Chiết xuất áp suất cao, đậm vị, có lớp crema vàng mịn.</p>
           </div>
         </li>
-        <li>
+        <li class="search-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Latteart.jpg/640px-Latteart.jpg" alt="Cappuccino">
           <div class="topic-text">
             <strong>Cappuccino</strong>
             <p>1/3 Espresso, 1/3 sữa nóng, 1/3 bọt sữa dày.</p>
           </div>
         </li>
-        <li>
+        <li class="search-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Latteart.jpg/640px-Latteart.jpg" alt="Latte">
           <div class="topic-text">
             <strong>Latte</strong>
             <p>Sữa nóng nhiều hơn, bọt mỏng hơn, vị béo ngậy.</p>
           </div>
         </li>
-        <li>
+        <li class="search-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG" alt="Americano">
           <div class="topic-text">
             <strong>Americano</strong>
             <p>Espresso pha thêm nước sôi, vị đắng nhẹ hơn.</p>
           </div>
         </li>
-        <li>
+        <li class="search-item">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG" alt="Cold Brew">
           <div class="topic-text">
             <strong>Cold Brew</strong>
@@ -152,29 +175,37 @@
   <section id="gallery">
     <div class="section-inner">
       <h2>Bộ sưu tập</h2>
+      
+      <div class="filter-buttons" style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+        <button class="filter-btn primary-button" data-filter="all" style="border:none; cursor:pointer; padding:6px 16px;">Tất cả</button>
+        <button class="filter-btn primary-button" data-filter="hat" style="border:none; cursor:pointer; padding:6px 16px; background:#3b1f0a; color:#fff;">Hạt Cà Phê</button>
+        <button class="filter-btn primary-button" data-filter="truyenthong" style="border:none; cursor:pointer; padding:6px 16px; background:#3b1f0a; color:#fff;">Truyền Thống</button>
+        <button class="filter-btn primary-button" data-filter="phamay" style="border:none; cursor:pointer; padding:6px 16px; background:#3b1f0a; color:#fff;">Pha Máy</button>
+      </div>
+
       <div class="portfolio-grid">
-        <div class="portfolio-item">
+        <div class="portfolio-item gallery-item search-item" data-category="truyenthong">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG" alt="Cà phê đen">
           <p>Cà phê đen</p>
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item gallery-item search-item" data-category="phamay">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Latteart.jpg/640px-Latteart.jpg" alt="Latte Art">
           <p>Latte Art</p>
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item gallery-item search-item" data-category="hat">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Single_coffee_bean.jpg/640px-Single_coffee_bean.jpg" alt="Hạt cà phê">
           <p>Hạt cà phê</p>
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item gallery-item search-item" data-category="phamay">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG" alt="Espresso">
           <p>Espresso</p>
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-item gallery-item search-item" data-category="phamay">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Latteart.jpg/640px-Latteart.jpg" alt="Cappuccino">
           <p>Cappuccino</p>
         </div>
-        <div class="portfolio-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Single_coffee_bean.jpg/640px-Single_coffee_bean.jpg" alt="Cold Brew">
+        <div class="portfolio-item gallery-item search-item" data-category="truyenthong">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG" alt="Cold Brew">
           <p>Cold Brew</p>
         </div>
       </div>
@@ -201,15 +232,15 @@
           </div>
         </div>
         
-        <form class="contact-form">
-          <label for="ho-ten">Họ tên:</label>
-          <input type="text" id="ho-ten" name="ho-ten" required>
+        <form class="contact-form" id="contactForm">
+          <label for="fullName">Họ tên:</label>
+          <input type="text" id="fullName" name="ho-ten">
           
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
+          <input type="text" id="email" name="email"> <label for="noi-dung">Nội dung:</label>
+          <textarea id="noi-dung" name="noi-dung" rows="4"></textarea>
           
-          <label for="noi-dung">Nội dung:</label>
-          <textarea id="noi-dung" name="noi-dung" rows="4" required></textarea>
+          <p id="formMessage" style="font-size: 13px; font-weight: bold; min-height: 18px; margin: 5px 0;"></p>
           
           <input type="submit" value="Gửi">
         </form>
@@ -222,5 +253,6 @@
 <footer>
   <p>© 2025 MyWeb Cafe — Vo Thanh Sang</p>
 </footer>
+
 </body>
 </html>
