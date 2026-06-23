@@ -90,7 +90,11 @@ figcaption {
   position: relative;
   z-index: 1;
 }
-
+.hero figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .eyebrow {
   font-size: 13px;
   color: #f5c878;
